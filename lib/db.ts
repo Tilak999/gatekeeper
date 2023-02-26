@@ -7,7 +7,6 @@ if (!process.env.DATABASE_URL)
   throw new Error("DATABASE_URL env variable not set");
 
 const db = mysql({
-  onConnect: () => console.log("DB connected!"),
   config: {
     host: process.env.DATABASE_HOST,
     port: parseInt(process.env.DATABASE_PORT || "3306"),
